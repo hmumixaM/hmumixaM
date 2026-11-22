@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#26253e">
+  <meta name="description" content="Yo’s workbench. Explore six open-source projects, from an in-page browser agent to a Rust market-data recorder.">
+  <title>Yo’s workbench · hmumixaM</title>
+  <link rel="icon" href="media/goose-crt.png">
+  <link rel="stylesheet" href="workbench.css">
+  <script defer src="workbench.js"></script>
+</head>
+<body>
+<main>
+  <header>
+    <nav><span>~ / hmumixaM</span><a href="https://github.com/hmumixaM">GitHub profile ↗</a></nav>
+    <div class="hero">
+      <div><h1>Yo’s workbench<span aria-hidden="true">_</span></h1>
+      <p>I build browser tools, turn long recordings into reading notes, and replay market data one snapshot at a time.</p></div>
+      <img src="media/goose-crt.png" width="572" height="468" alt="A pixel goose peers out of a vintage computer.">
+    </div>
+    <div id="terminal" hidden>
+      <form id="shell">
+        <label for="command"><span aria-hidden="true">~ $</span><span class="sr-only">Workbench command</span></label>
+        <input id="command" placeholder="try: open xgoose" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="96" aria-describedby="hint">
+        <button type="submit">Run ↵</button>
+      </form>
+      <p id="hint">Type <code>ls</code> to list projects or <code>help</code> for commands.</p>
+      <p id="result" role="status"></p>
+    </div>
+  </header>
+  <section class="directory" aria-labelledby="projects">
+    <div class="directory-head"><h2 id="projects" tabindex="-1">Project directory</h2><span>~/projects</span></div>
+    <details id="stream-reducer" open>
+      <summary><strong>Stream Reducer</strong><span>Media &amp; reading</span></summary>
+      <div class="entry featured">
+        <div><p>Read a conference talk over coffee. Each bulletin takes you from the key ideas back to the moment they were said.</p>
+        <p class="tech">TypeScript / Cloudflare Workers / D1</p>
+        <div class="links"><a href="https://reducer.xgoose.org/collections/ai4-2026?view=bulletin">Read the AI4 bulletin ↗</a><a href="https://github.com/hmumixaM/stream-reducer">Source</a></div></div>
+        <img src="media/bulletin.webp" alt="Stream Reducer’s Bulletin with timestamped notes from a conference talk." width="720" height="498">
+      </div>
+    </details>
+    <details id="xgoose">
+      <summary><strong>xgoose</strong><span>Browser agent</span></summary>
+      <div class="entry"><p>Ask about the page you already have open. Site-specific skills give the agent tools for working with what’s on screen.</p>
+      <p class="tech">Chrome extension / TypeScript / Pi</p>
+      <div class="links"><a href="https://xgoose.org/chrome/">Get the extension ↗</a><a href="https://github.com/xGoose-dev/xgoose/releases/latest">Latest release</a><a href="https://github.com/xGoose-dev/xgoose">Source</a></div></div>
+    </details>
+    <details id="monica-next">
+      <summary><strong>Monica Next</strong><span>Personal CRM</span></summary>
+      <div class="entry"><p>Keep a timeline of conversations and shared memories on your own server. Follow the relationship graph to see how people connect.</p>
+      <p class="tech">Python / FastAPI / Next.js</p>
+      <div class="links"><a href="https://hmumixam.github.io/monica-next/">Tour the interface ↗</a><a href="https://github.com/hmumixaM/monica-next">Source</a></div></div>
+    </details>
+    <details id="poly-us">
+      <summary><strong>poly-us</strong><span>Market data</span></summary>
+      <div class="entry"><p>Capture Polymarket US order books in Parquet. Replay snapshots by arrival time to see what the recorder could observe at each step.</p>
+      <p class="tech">Rust / Parquet / Zstandard</p>
+      <div class="links"><a href="https://github.com/hmumixaM/poly-us#quick-start-docker">Run the collector ↗</a><a href="https://github.com/hmumixaM/poly-us">Source</a></div></div>
+    </details>
+    <details id="lhw-award-helper">
+      <summary><strong>LHW Award Helper</strong><span>Travel tools</span></summary>
+      <div class="entry"><p>Compare hotel awards by the cash saved per point. The userscript adds the numbers to the LHW search results while you browse.</p>
+      <p class="tech">JavaScript / Userscript / Bookmarklet</p>
+      <div class="links"><a href="https://hmumixam.github.io/lhw-award-helper/dist/install.html">Get the bookmarklet ↗</a><a href="https://github.com/hmumixaM/lhw-award-helper">Source</a></div></div>
+    </details>
+    <details id="blockchain-ingestion-service">
+      <summary><strong>Blockchain ingestion</strong><span>Systems talk</span></summary>
+      <div class="entry"><p>An interactive presentation on streaming new blockchain data while backfilling historical records.</p>
+      <div class="links"><a href="https://hmumixam.github.io/blockchain-ingestion-service/">View the presentation ↗</a><a href="https://github.com/hmumixaM/blockchain-ingestion-service">Source</a></div></div>
+    </details>
+  </section>
+</main>
+</body>
+</html>
